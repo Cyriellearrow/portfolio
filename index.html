@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Cyrielle Arrault</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700;800&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body{
+            font-family: 'Nunito',sans-serif;
+            background: linear-gradient(135deg, #ffecd2 0%, #f6beab 100%);
+            color: #5D4037;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        /* Entete */
+        header{
+            text-align: center;
+            padding: 60px 20px 40px;
+            position: relative;
+        }
+
+        h1{
+            font-size: 3em;
+            margin-bottom: 10px;
+            animation: bounce 2s ease-in-out infinite;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .subtitle {
+            font-size: 1.3em;
+            color: #8D6E63;
+            margin-bottom: 20px;
+        }
+
+        .intro {
+            max-width: 700px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.8);
+            padding: 25px;
+            border-radius: 25px;
+            border: 3px solid #A1887F;
+            box-shadow: 5px 5px 0 rgba(141, 110, 99, 0.3);
+            line-height: 1.7;
+        }
+
+        /* Navigation */
+        nav{
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            padding: 30px 0;
+            flex-wrap: wrap;
+        }
+
+        .nav-btn{
+            display: inline-block;
+            background: #f6beab;
+            color: white;
+            padding: 12px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            border: 3px solid #cb937d;  
+            box-shadow: 3px 3px 0 rgba(141, 110, 99, 0.3);  
+            transition: all 0.3s ease;
+        }
+
+        .nav-btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 6px 6px 0 rgba(141, 110, 99, 0.3);
+        }
+
+        /*contener  */
+        .contener{
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        section{
+            background: #ffecd2;
+            margin: 30px 0;
+            padding: 40px;
+            border-radius: 30px;
+            border: 4px solid #ab7d6b;
+            box-shadow: 8px 8px 0 rgba(141, 110, 99, 0.3);
+        }
+
+        h2{
+            color: #6D4C41;
+            font-size: 2.2em;
+            margin-bottom: 25px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        h2::before {
+            content: '🌱';
+            font-size: 1.2em;
+        }
+
+         /* Projets */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-top: 30px;
+        }
+        
+        .project-card {
+            background: linear-gradient(135deg, #FFF9C4 0%, #FFECB3 100%);
+            padding: 25px;
+            border-radius: 20px;
+            border: 3px solid #FDD835;
+            box-shadow: 5px 5px 0 rgba(253, 216, 53, 0.3);
+            transition: transform 0.3s ease;
+            cursor: pointer;
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+        
+        .project-card:hover {
+            transform: rotate(-2deg) scale(1.05);
+        }
+        
+        .project-card h3 {
+            color: #F57C00;
+            font-size: 1.5em;
+            margin-bottom: 15px;
+        }
+        
+        .project-card p {
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+        
+        .tag-project {
+            background: #FFB74D;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 15px;
+            font-size: 0.9em;
+            display: inline-block;
+            margin: 5px 5px 0 0;
+            border: 2px solid #FF9800;
+        }
+
+        .view-more {
+            display: inline-block;
+            margin-top: 15px;
+            color: #F57C00;
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        .view-more:hover {
+            text-decoration: underline;
+        }
+        
+        /* Compétences */
+        .competance-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+        
+        .skill-box {
+            background: linear-gradient(135deg, #B3E5FC 0%, #81D4FA 100%);
+            padding: 20px;
+            border-radius: 20px;
+            border: 3px solid #4FC3F7;
+            text-align: center;
+            box-shadow: 4px 4px 0 rgba(79, 195, 247, 0.3);
+        }
+
+        .skill-box a {
+            display: inline-block;
+            margin-top: 8px;
+            margin-right: 5px;
+            font-size: 9px;
+            text-decoration: none;
+            color: #4c555c;
+            font-weight: 600;
+            padding: 5px;
+            border: 1px solid #4c555c;
+            border-radius: 10px;
+        }
+        
+        .skill-box h3 {
+            color: #01579B;
+            font-size: 1.3em;
+            margin-bottom: 10px;
+        }
+        
+        .skill-icon {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        
+        /* Contact */
+        .contact-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+
+        #contact p {
+            text-align: center;
+            margin-top: 20px;
+        }
+        
+        .contact-btn {
+            background: #FFB6C1;
+            color: #880E4F;
+            padding: 15px 35px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            border: 3px solid #F48FB1;
+            box-shadow: 5px 5px 0 rgba(244, 143, 177, 0.4);
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .contact-btn:hover {
+            transform: translateY(-5px) rotate(2deg);
+            box-shadow: 7px 7px 0 rgba(244, 143, 177, 0.4);
+        }
+        
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            color: #8D6E63;
+            font-size: 0.95em;
+        }
+
+        /* Décorations */
+        .cloud {
+            position: fixed;
+            background: rgba(255, 255, 255, 0.7);
+            border-radius: 100px;
+            opacity: 0.6;
+            animation: float 60s infinite linear;
+        }
+        
+        .cloud1 { width: 100px; height: 50px; top: 10%; left: -100px; animation-duration: 50s; }
+        .cloud2 { width: 150px; height: 70px; top: 20%; left: -150px; animation-duration: 70s; }
+        .cloud3 { width: 80px; height: 40px; top: 15%; left: -80px; animation-duration: 60s; }
+        
+        @keyframes float {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(100vw); }
+        }
+
+        .fall {
+            position: fixed;
+            font-size: 2em;
+            opacity: 0.2;
+            animation: fall 10s infinite linear;
+        }
+
+        @keyframes fall {
+            0% { transform: translateY(-100px) rotate(0deg); }
+            100% { transform: translateY(100vh) rotate(360deg); }
+        }
+        
+        .moon { left: 10%; animation-duration: 12s; }
+        .cat { left: 30%; animation-duration: 15s; animation-delay: 2s; }
+        .flower { left: 50%; animation-duration: 10s; animation-delay: 4s; }
+        .peach { left: 70%; animation-duration: 13s; animation-delay: 1s; }
+        .star { left: 90%; animation-duration: 11s; animation-delay: 3s; }
+    </style>
+</head>
+<body>
+    <!-- Nuages animés -->
+    <div class="cloud cloud1"></div>
+    <div class="cloud cloud2"></div>
+    <div class="cloud cloud3"></div>
+    
+    <!-- Feuilles qui tombent -->
+    <div class="fall moon">🌑</div>
+    <div class="fall cat">😺</div>
+    <div class="fall flower">🌸</div>
+    <div class="fall peach">🍑</div>
+    <div class="fall star">✨</div>
+    
+    <!-- Header/information -->
+    <header>
+        <h1>✨Cyrielle✨</h1>
+        <p class="subtitle">Thésarde en reconversion | Développeuse web en devenir</p>
+        <div class="intro">
+            <p>👋 Bienvenue dans mon petit coin de code ! Après une aventure en recherche, je me lance avec enthousiasme dans le monde de l'informatique. Passionnée par Python et en apprentissage continu, je recherche une alternance pour grandir et contribuer à de beaux projets.</p>
+        </div>
+    </header>
+
+    <!-- navigation -->
+    <nav>
+        <a href="#projets" class="nav-btn">🎨 Mes Projets</a>
+        <a href="#competences" class="nav-btn">🌱 Compétences</a>
+        <a href="#parcours" class="nav-btn">🎓 Parcours</a>
+        <a href="#contact" class="nav-btn">💌 Contact</a>
+    </nav>
+
+    <div class="contener">
+        <!-- project -->
+        <section id="projets">
+            <h2>Mes projets</h2>
+            <div class="projects-grid">
+                <a href="ccpnmr-project.html" class="project-card">
+                    <h3>CCPNMR v3 to cyana convertor</h3>
+                    <p>Outil de conversion pour faciliter l'analyse de données RMN entre deux logiciels scientifiques.</p>
+                    <span class="tag-project">Python</span>
+                    <span class="tag-project">PyQT6</span>
+                    <span class="tag-project">pandas</span>
+                    <span class="view-more">→ Voir le projet en détail</span>
+                </a>
+            </div>
+        </section>
+
+        <!-- Compétances -->
+        <section id="competences">
+            <h2>Compétances</h2>
+            <div class="competance-grid">
+                <div class="skill-box">
+                    <div class="skill-icon">🐍</div>
+                    <h3>Python</h3>
+                    <p>Formation MOOC FUN (180h) et (81h)</p>
+                    <a href="https://www.fun-mooc.fr/fr/cours/apprendre-a-coder-avec-python/" target="_blank">Plus d'information (120 h)</a>
+                    <a href="https://www.fun-mooc.fr/fr/cours/python-3-des-fondamentaux-aux-concepts-avances-du-langage/" target="_blank">Plus d'information (81 h)</a>
+                </div>
+
+                <div class="skill-box">
+                    <div class="skill-icon">🌐</div>
+                    <h3>HTML & CSS</h3>
+                    <p>Création de pages web responsives, mise en page, animations</p>
+                </div>
+
+                <div class="skill-box">
+                    <div class="skill-icon">📊</div>
+                    <h3>Analyse de données</h3>
+                    <p>Pandas, numpy, matplotlib, analyse statistique</p>
+                </div>
+
+                <div class="skill-box">
+                    <div class="skill-icon">🎓</div>
+                    <h3>Recherche scientifique</h3>
+                    <p>Rigueur, méthodologie, résolution de problèmes complexes, management</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="parcours">
+            <h2>Mon Parcours</h2>
+            <p style="line-height: 1.8; font-size: 1.1em;">
+                🎓 <strong>Actuellement :</strong> Thésarde en reconversion vers l'informatique<br><br>
+                💻 <strong>Formation Python :</strong> 120 heures de MOOC sur FUN - Maîtrise des fondamentaux et des bonnes pratiques<br><br>
+                🌱 <strong>Apprentissage actif :</strong> Python, HTML, CSS, et découverte de nouveaux outils chaque jour<br><br>
+                🔍 <strong>Ce que je recherche :</strong> Une alternance en développement pour mettre en pratique mes compétences et continuer à apprendre dans un environnement professionnel<br><br>
+                ✨ <strong>Mes atouts :</strong> Rigueur scientifique, capacité d'analyse, persévérance et passion pour le code
+            </p>
+        </section>
+
+        <!-- Section Contact -->
+        <section id="contact">
+            <h2>Restons en contact !</h2>
+            <div class="contact-links">
+                <a href="https://github.com/cyriellearrow" class="contact-btn" target="_blank">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="#5a4a6b">
+                        <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/>
+                    </svg> 
+                    <span>GitHub</span>
+                </a>
+                <a href="mailto:cyrielle.arrault@outlook.com" class="contact-btn">
+                    <span>📧</span> Email
+                </a>
+                <a href="https://www.linkedin.com/in/cyrielle-arrault-5695b5204/" class="contact-btn" target="_blank">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="#5a4a6b">
+                        <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                    </svg>
+                    <span>LinkedIn</span>
+                </a>
+            </div>
+            <p>N'hésitez pas à me contacter pour discuter d'opportunités d'alternance ! ☕</p>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>🌸 Fait avec passion et un peu de magie 🌸</p>
+        <p>© 2025 Cyrielle - Tous droits réservés</p>
+    </footer>
+</body>
+</html>
