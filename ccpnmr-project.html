@@ -1,275 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CCPNMR v3 to Cyana Convertor - Cyrielle Arrault</title>
-
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700;800&display=swap');
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Nunito', sans-serif;
-            background: linear-gradient(135deg, #ffecd2 0%, #f6beab 100%);
-            color: #5D4037;
-            min-height: 100vh;
-            overflow-x: hidden;
-        }
-
-        /* Header simplifié */
-        header {
-            text-align: center;
-            padding: 40px 20px 30px;
-            position: relative;
-        }
-
-        .back-btn {
-            position: absolute;
-            left: 20px;
-            top: 40px;
-            background: #f6beab;
-            color: white;
-            padding: 10px 25px;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 600;
-            border: 3px solid #cb937d;
-            box-shadow: 3px 3px 0 rgba(141, 110, 99, 0.3);
-            transition: all 0.3s ease;
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .back-btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 5px 5px 0 rgba(141, 110, 99, 0.3);
-        }
-
-        h1 {
-            font-size: 2.5em;
-            margin-bottom: 15px;
-            color: #F57C00;
-        }
-
-        .project-subtitle {
-            font-size: 1.2em;
-            color: #8D6E63;
-            margin-bottom: 20px;
-        }
-
-        /* Container */
-        .container {
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-
-        /* Sections */
-        section {
-            background: rgba(255, 255, 255, 0.9);
-            margin: 25px 0;
-            padding: 35px;
-            border-radius: 25px;
-            border: 3px solid #ab7d6b;
-            box-shadow: 6px 6px 0 rgba(141, 110, 99, 0.3);
-        }
-
-        h2 {
-            color: #6D4C41;
-            font-size: 1.8em;
-            margin-bottom: 20px;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
-
-        h3 {
-            color: #F57C00;
-            font-size: 1.3em;
-            margin: 20px 0 10px 0;
-        }
-
-        p {
-            line-height: 1.8;
-            margin-bottom: 15px;
-            font-size: 1.05em;
-        }
-
-        ul {
-            margin-left: 25px;
-            line-height: 1.8;
-        }
-
-        li {
-            margin-bottom: 10px;
-        }
-
-        /* Tags */
-        .tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            margin: 20px 0;
-        }
-
-        .tag {
-            background: #FFB74D;
-            color: white;
-            padding: 8px 20px;
-            border-radius: 20px;
-            font-size: 0.95em;
-            font-weight: 600;
-            border: 2px solid #FF9800;
-        }
-
-        /* Image placeholder */
-        .image-placeholder {
-            background: linear-gradient(135deg, #E8EAF6 0%, #C5CAE9 100%);
-            border: 3px dashed #7986CB;
-            border-radius: 15px;
-            padding: 60px 20px;
-            text-align: center;
-            margin: 25px 0;
-            color: #5C6BC0;
-            font-weight: 600;
-        }
-
-        .image-placeholder::before {
-            display: block;
-            font-size: 3em;
-            margin-bottom: 15px;
-        }
-
-        /* Stats box */
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 15px;
-            margin: 20px 0;
-        }
-
-        .stat-box {
-            background: linear-gradient(135deg, #B3E5FC 0%, #81D4FA 100%);
-            padding: 20px;
-            border-radius: 15px;
-            border: 3px solid #4FC3F7;
-            text-align: center;
-        }
-
-        .stat-number {
-            font-size: 2em;
-            font-weight: 700;
-            color: #01579B;
-            display: block;
-        }
-
-        .stat-label {
-            color: #0277BD;
-            font-weight: 600;
-            margin-top: 5px;
-        }
-
-        /* Highlight box */
-        .highlight-box {
-            background: linear-gradient(135deg, #FFF9C4 0%, #FFECB3 100%);
-            padding: 20px;
-            border-radius: 15px;
-            border: 3px solid #FDD835;
-            margin: 20px 0;
-            border-left: 8px solid #F57C00;
-        }
-
-        /* CTA Button */
-        .cta-buttons {
-            display: flex;
-            gap: 15px;
-            flex-wrap: wrap;
-            justify-content: center;
-            margin: 30px 0;
-        }
-
-        .cta-btn {
-            background: #FFB6C1;
-            color: #880E4F;
-            padding: 15px 35px;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 600;
-            border: 3px solid #F48FB1;
-            box-shadow: 5px 5px 0 rgba(244, 143, 177, 0.4);
-            transition: all 0.3s ease;
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .cta-btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 7px 7px 0 rgba(244, 143, 177, 0.4);
-        }
-
-        .cta-btn.secondary {
-            background: #B3E5FC;
-            color: #01579B;
-            border-color: #4FC3F7;
-            box-shadow: 5px 5px 0 rgba(79, 195, 247, 0.4);
-        }
-
-        .cta-btn.secondary:hover {
-            box-shadow: 7px 7px 0 rgba(79, 195, 247, 0.4);
-        }
-
-        /* Footer */
-        footer {
-            text-align: center;
-            padding: 30px 20px;
-            color: #8D6E63;
-            font-size: 0.95em;
-        }
-
-        /* Décorations */
-        .cloud {
-            position: fixed;
-            background: rgba(255, 255, 255, 0.7);
-            border-radius: 100px;
-            opacity: 0.4;
-            animation: float 60s infinite linear;
-            z-index: -1;
-        }
-        
-        .cloud1 { width: 100px; height: 50px; top: 10%; left: -100px; animation-duration: 50s; }
-        .cloud2 { width: 150px; height: 70px; top: 60%; left: -150px; animation-duration: 70s; }
-        
-        @keyframes float {
-            0% { transform: translateX(0); }
-            100% { transform: translateX(100vw); }
-        }
-
-        /* Responsive */
-        @media (max-width: 768px) {
-            .back-btn {
-                position: relative;
-                left: 0;
-                top: 0;
-                margin-bottom: 20px;
-            }
-
-            h1 {
-                font-size: 1.8em;
-            }
-
-            section {
-                padding: 25px;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <!-- Nuages animés -->
@@ -288,9 +23,9 @@
             <h2>📖 Vue d'ensemble</h2>
             <p>
                 Le <strong>CCPNMR v3 to Cyana Convertor</strong> est un outil développé pour faciliter le travail des chercheurs en RMN (Résonance Magnétique Nucléaire).
-                 Il permet de convertir automatiquement les données issues du logiciel CCPNMR Analysis v3 vers le format compatible avec CYANA, évitant ainsi des heures de travail manuel fastidieux.
+                Il permet de convertir automatiquement les données issues du logiciel CCPNMR Analysis v3 vers un format compatible avec CYANA, évitant ainsi des heures de travail manuel fastidieux.
             </p>
-            
+
             <div class="tags">
                 <span class="tag">Python</span>
                 <span class="tag">PyQt6</span>
@@ -300,23 +35,23 @@
             </div>
 
             <div class="image-placeholder">
-                <img src="ccpnmrv3tocyana.png" alt="Interface CCPNMR to Cyana" width="300">                
+                <img src="ccpnmrv3tocyana.png" alt="Interface CCPNMR to Cyana">
             </div>
         </section>
 
         <!-- Contexte et problématique -->
         <section>
             <h2>🎯 Contexte et problématique</h2>
-            
+
             <h3>Le problème</h3>
             <p>
                 Dans le domaine de la recherche en biologie structurale, les scientifiques utilisent différents logiciels pour analyser leurs données RMN. Passer de CCPNMR Analysis v3 à CYANA nécessitait auparavant :
             </p>
             <ul>
                 <li>Une conversion manuelle des fichiers de données</li>
-                <li>Un reformatage fastidieux des listes de pics ( Plus de 500 ligne excel)</li>
+                <li>Un reformatage fastidieux des listes de pics (plus de 500 lignes Excel)</li>
                 <li>Une vérification minutieuse pour éviter les erreurs</li>
-                <li>Plusieurs semaine  / mois de travail répétitif par projet</li>
+                <li>Plusieurs semaines, voire plusieurs mois, de travail répétitif par projet</li>
             </ul>
 
             <h3>La solution</h3>
@@ -332,12 +67,12 @@
         <!-- Fonctionnalités -->
         <section>
             <h2>⚙️ Fonctionnalités principales</h2>
-            
+
             <ul>
-                <li><strong>Interface graphique intuitive</strong> - Développée avec PyQt6 pour une utilisation simple et accessible</li>
-                <li><strong>Conversion automatique</strong> - Traitement des fichiers CCPNMR et génération automatique des fichiers CYANA</li>
-                <li><strong>Gestion des données structurées</strong> - Utilisation de pandas pour manipuler efficacement les données tabulaires</li>
-                <li><strong>Export personnalisable</strong> - Options de formatage selon les besoins spécifiques</li>
+                <li><strong>Interface graphique intuitive</strong> — développée avec PyQt6 pour une utilisation simple et accessible</li>
+                <li><strong>Conversion automatique</strong> — traitement des fichiers CCPNMR et génération automatique des fichiers CYANA</li>
+                <li><strong>Gestion des données structurées</strong> — utilisation de pandas pour manipuler efficacement les données tabulaires</li>
+                <li><strong>Export personnalisable</strong> — options de formatage selon les besoins spécifiques</li>
             </ul>
 
         </section>
@@ -345,7 +80,7 @@
         <!-- Technologies -->
         <section>
             <h2>🛠️ Technologies utilisées</h2>
-            
+
             <h3>Python 3.13</h3>
             <p>Langage principal du projet, choisi pour sa simplicité et sa puissance dans le traitement de données.</p>
 
@@ -353,7 +88,7 @@
             <p>Framework pour l'interface graphique, permettant de créer une application desktop moderne et réactive.</p>
 
             <h3>Pandas 2.3.2</h3>
-            <p>Manipulation de donnée complexe en format CSV</p>
+            <p>Manipulation de données complexes au format CSV.</p>
         </section>
 
         <!-- Stats -->
