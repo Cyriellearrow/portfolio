@@ -186,6 +186,54 @@ li {
     border-left: 8px solid #F57C00;
 }
 
+/* Code snippet + bouton copier */
+.code-snippet {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    background: #4A3B33;
+    color: #FFECB3;
+    padding: 14px 18px;
+    border-radius: 12px;
+    margin: 0 auto 20px;
+    max-width: 560px;
+    border: 3px solid #6D4C41;
+    box-shadow: 4px 4px 0 rgba(141, 110, 99, 0.3);
+}
+
+.code-snippet code {
+    font-family: 'Courier New', Consolas, monospace;
+    font-size: 0.9em;
+    overflow-x: auto;
+    white-space: nowrap;
+    text-align: left;
+}
+
+.copy-btn {
+    flex-shrink: 0;
+    background: #FFB74D;
+    color: #4A3B33;
+    border: 2px solid #FF9800;
+    padding: 8px 16px;
+    border-radius: 30px;
+    font-weight: 700;
+    font-family: inherit;
+    font-size: 0.9em;
+    cursor: pointer;
+    transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.copy-btn:hover {
+    transform: translateY(-2px);
+}
+
+.copy-btn.copied {
+    background: #A5D6A7;
+    border-color: #66BB6A;
+    color: #1B5E20;
+}
+
 /* CTA Buttons */
 .cta-buttons {
     display: flex;
@@ -352,6 +400,18 @@ footer {
     }
 }
 
+/* Révélation des sections au scroll (activée en JS) */
+section.reveal {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+section.reveal.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 /* Respecte les préférences de réduction de mouvement */
 @media (prefers-reduced-motion: reduce) {
     .cloud {
@@ -359,7 +419,28 @@ footer {
     }
 
     .back-btn:hover,
-    .cta-btn:hover {
+    .cta-btn:hover,
+    .copy-btn:hover {
         transform: none;
+    }
+
+    section.reveal {
+        transition: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .code-snippet {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .code-snippet code {
+        white-space: normal;
+        word-break: break-all;
+    }
+
+    .copy-btn {
+        width: 100%;
     }
 }
