@@ -22,7 +22,8 @@ header {
 }
 
 h1 {
-    font-size: 3em;
+    font-size: clamp(1.7rem, 7vw, 3em);
+    line-height: 1.15;
     margin-bottom: 10px;
     animation: bounce 2s ease-in-out infinite;
 }
@@ -36,6 +37,73 @@ h1 {
     font-size: 1.3em;
     color: #8D6E63;
     margin-bottom: 20px;
+}
+
+/* Photo de profil */
+.profile-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+}
+
+.profile-photo {
+    width: clamp(80px, 22vw, 120px);
+    height: clamp(80px, 22vw, 120px);
+    flex-shrink: 0;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid #A1887F;
+    box-shadow: 5px 5px 0 rgba(141, 110, 99, 0.3);
+}
+
+.profile-text {
+    text-align: left;
+    min-width: 0;
+}
+
+.profile-text h1 {
+    margin-bottom: 5px;
+}
+
+.profile-text .subtitle {
+    margin-bottom: 0;
+}
+
+@media (max-width: 600px) {
+    .profile-row {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+
+    .profile-text {
+        text-align: center;
+    }
+}
+
+/* Bouton téléchargement CV */
+.cv-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 25px;
+    background: #A1887F;
+    color: white;
+    padding: 14px 32px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    border: 3px solid #8D6E63;
+    box-shadow: 4px 4px 0 rgba(141, 110, 99, 0.3);
+    transition: all 0.3s ease;
+}
+
+.cv-btn:hover {
+    transform: translateY(-4px);
+    box-shadow: 6px 6px 0 rgba(141, 110, 99, 0.3);
 }
 
 .intro {
@@ -174,12 +242,12 @@ h2::before {
 }
 
 .skill-box {
-    background: linear-gradient(135deg, #B3E5FC 0%, #81D4FA 100%);
+    background: linear-gradient(135deg, color-mix(in srgb, var(--accent, #4FC3F7) 10%, white) 0%, color-mix(in srgb, var(--accent, #4FC3F7) 25%, white) 100%);
     padding: 20px;
     border-radius: 20px;
-    border: 3px solid #4FC3F7;
+    border: 3px solid var(--accent, #4FC3F7);
     text-align: center;
-    box-shadow: 4px 4px 0 rgba(79, 195, 247, 0.3);
+    box-shadow: 4px 4px 0 color-mix(in srgb, var(--accent, #4FC3F7) 35%, transparent);
 }
 
 .skill-box a {
@@ -196,7 +264,7 @@ h2::before {
 }
 
 .skill-box h3 {
-    color: #01579B;
+    color: color-mix(in srgb, var(--accent, #01579B) 70%, black);
     font-size: 1.3em;
     margin-bottom: 10px;
 }
@@ -204,6 +272,14 @@ h2::before {
 .skill-icon {
     font-size: 2.5em;
     margin-bottom: 10px;
+    color: var(--accent, #01579B);
+}
+
+.skill-icon svg {
+    width: 1em;
+    height: 1em;
+    margin: 0 auto;
+    display: block;
 }
 
 /* Contact */
