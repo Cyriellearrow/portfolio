@@ -360,3 +360,123 @@ footer {
 .flower { left: 50%; animation-duration: 10s; animation-delay: 4s; }
 .peach { left: 70%; animation-duration: 13s; animation-delay: 1s; }
 .star { left: 90%; animation-duration: 11s; animation-delay: 3s; }
+
+/* Formulaire "Me joindre" */
+.contact-form-wrapper {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.contact-form-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    background: #FFB6C1;
+    color: #880E4F;
+    padding: 15px 35px;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 1em;
+    font-family: inherit;
+    border: 3px solid #F48FB1;
+    box-shadow: 5px 5px 0 rgba(244, 143, 177, 0.4);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.contact-form-toggle:hover,
+.contact-form-toggle.is-active {
+    transform: translateY(-3px);
+    box-shadow: 7px 7px 0 rgba(244, 143, 177, 0.4);
+}
+
+.contact-form-box {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease, margin-top 0.5s ease;
+    margin-top: 0;
+}
+
+.contact-form-box.is-open {
+    max-height: 700px;
+    margin-top: 20px;
+}
+
+.contact-form-box form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background: rgba(255, 255, 255, 0.85);
+    border: 3px solid #F48FB1;
+    border-radius: 20px;
+    padding: 25px;
+    box-shadow: 5px 5px 0 rgba(244, 143, 177, 0.3);
+    text-align: left;
+}
+
+.contact-form-box label {
+    font-weight: 600;
+    color: #880E4F;
+    font-size: 0.95em;
+    margin-top: 5px;
+}
+
+.contact-form-box input,
+.contact-form-box textarea {
+    font-family: inherit;
+    font-size: 1em;
+    padding: 12px 15px;
+    border-radius: 15px;
+    border: 2px solid #F8BBD0;
+    background: white;
+    color: #5D4037;
+    resize: vertical;
+}
+
+.contact-form-box input:focus,
+.contact-form-box textarea:focus {
+    outline: none;
+    border-color: #F48FB1;
+}
+
+.form-submit-btn {
+    margin-top: 10px;
+    background: #F48FB1;
+    color: white;
+    border: 3px solid #EC407A;
+    padding: 12px 20px;
+    border-radius: 50px;
+    font-weight: 700;
+    font-family: inherit;
+    font-size: 1em;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.form-submit-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 4px 4px 0 rgba(236, 64, 122, 0.4);
+}
+
+.form-submit-btn:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.form-status {
+    text-align: center;
+    font-weight: 600;
+    margin-top: 5px;
+    min-height: 1.2em;
+}
+
+.form-status.success {
+    color: #2E7D32;
+}
+
+.form-status.error {
+    color: #C62828;
+}
