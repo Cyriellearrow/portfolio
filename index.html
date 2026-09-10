@@ -159,17 +159,27 @@
                         <input type="hidden" name="_template" value="table">
                         <input type="hidden" name="_captcha" value="false">
 
-                        <label for="cf-name">Votre nom</label>
-                        <input type="text" id="cf-name" name="name" placeholder="Votre nom" required>
+                        <h3 class="form-title">Contactez-moi 🌸</h3>
 
-                        <label for="cf-email">Votre email</label>
-                        <input type="email" id="cf-email" name="email" placeholder="votre.email@exemple.com" required>
+                        <div class="form-field">
+                            <label for="cf-name">Votre nom <span class="required">*</span></label>
+                            <input type="text" id="cf-name" name="name" required>
+                        </div>
 
-                        <label for="cf-message">Votre message</label>
-                        <textarea id="cf-message" name="message" rows="5" placeholder="Écrivez votre message ici..." required></textarea>
+                        <div class="form-field">
+                            <label for="cf-email">Votre email <span class="required">*</span></label>
+                            <input type="email" id="cf-email" name="email" required>
+                        </div>
 
-                        <button type="submit" class="form-submit-btn">Envoyer 📨</button>
-                        <p id="form-status" class="form-status" aria-live="polite"></p>
+                        <div class="form-field">
+                            <label for="cf-message">Votre message <span class="required">*</span></label>
+                            <textarea id="cf-message" name="message" rows="4" required></textarea>
+                        </div>
+
+                        <div class="form-footer">
+                            <p id="form-status" class="form-status" aria-live="polite"></p>
+                            <button type="submit" class="form-submit-btn">Envoyer</button>
+                        </div>
                     </form>
                 </div>
             </div>
