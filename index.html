@@ -147,6 +147,32 @@
                 </a>
             </div>
             <p>N'hésitez pas à me contacter pour discuter d'opportunités de stage! ☕</p>
+
+            <!-- Formulaire "Me joindre" -->
+            <div class="contact-form-wrapper">
+                <button type="button" class="contact-form-toggle" id="contact-form-toggle" onclick="toggleContactForm()">
+                    <span>💌</span> Me joindre
+                </button>
+                <div class="contact-form-box" id="contact-form-box">
+                    <form id="contact-form" action="https://formsubmit.co/ajax/cyrielle.arrault@outlook.com" method="POST">
+                        <input type="hidden" name="_subject" value="Nouveau message depuis le portfolio 🌸">
+                        <input type="hidden" name="_template" value="table">
+                        <input type="hidden" name="_captcha" value="false">
+
+                        <label for="cf-name">Votre nom</label>
+                        <input type="text" id="cf-name" name="name" placeholder="Votre nom" required>
+
+                        <label for="cf-email">Votre email</label>
+                        <input type="email" id="cf-email" name="email" placeholder="votre.email@exemple.com" required>
+
+                        <label for="cf-message">Votre message</label>
+                        <textarea id="cf-message" name="message" rows="5" placeholder="Écrivez votre message ici..." required></textarea>
+
+                        <button type="submit" class="form-submit-btn">Envoyer 📨</button>
+                        <p id="form-status" class="form-status" aria-live="polite"></p>
+                    </form>
+                </div>
+            </div>
         </section>
     </div>
 
@@ -155,5 +181,51 @@
         <p>🌸 Fait avec passion et un peu de magie 🌸</p>
         <p>© 2025 Cyrielle - Tous droits réservés</p>
     </footer>
+
+    <script>
+        function toggleContactForm() {
+            const box = document.getElementById('contact-form-box');
+            const btn = document.getElementById('contact-form-toggle');
+            const isOpen = box.classList.toggle('is-open');
+            btn.classList.toggle('is-active', isOpen);
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const form = document.getElementById('contact-form');
+            const status = document.getElementById('form-status');
+
+            form.addEventListener('submit', function (e) {
+                e.preventDefault();
+                const submitBtn = form.querySelector('.form-submit-btn');
+                submitBtn.disabled = true;
+                submitBtn.textContent = 'Envoi en cours...';
+                status.textContent = '';
+                status.className = 'form-status';
+
+                fetch(form.action, {
+                    method: 'POST',
+                    headers: { 'Accept': 'application/json' },
+                    body: new FormData(form)
+                })
+                    .then(function (response) {
+                        if (!response.ok) throw new Error('Erreur réseau');
+                        return response.json();
+                    })
+                    .then(function () {
+                        status.textContent = '✅ Message envoyé, merci ! Je vous répondrai vite.';
+                        status.className = 'form-status success';
+                        form.reset();
+                    })
+                    .catch(function () {
+                        status.textContent = '❌ Oups, le message n\'a pas pu être envoyé. Réessayez ou écrivez-moi directement par email.';
+                        status.className = 'form-status error';
+                    })
+                    .finally(function () {
+                        submitBtn.disabled = false;
+                        submitBtn.textContent = 'Envoyer 📨';
+                    });
+            });
+        });
+    </script>
 </body>
 </html>
