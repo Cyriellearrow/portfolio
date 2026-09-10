@@ -411,43 +411,67 @@ footer {
 .contact-form-box form {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 20px;
     background: rgba(255, 255, 255, 0.85);
     border: 3px solid #F48FB1;
     border-radius: 20px;
-    padding: 25px;
+    padding: 30px;
     box-shadow: 5px 5px 0 rgba(244, 143, 177, 0.3);
     text-align: left;
 }
 
-.contact-form-box label {
+.form-title {
+    color: #880E4F;
+    font-size: 1.4em;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.form-field {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #F8BBD0;
+}
+
+.form-field label {
     font-weight: 600;
     color: #880E4F;
     font-size: 0.95em;
-    margin-top: 5px;
 }
 
-.contact-form-box input,
-.contact-form-box textarea {
+.form-field .required {
+    color: #EC407A;
+}
+
+.form-field input,
+.form-field textarea {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
     box-sizing: border-box;
     width: 100%;
+    border: none;
+    background: transparent;
     font-family: inherit;
     font-size: 1em;
-    padding: 12px 15px;
-    border-radius: 15px;
-    border: 2px solid #F8BBD0;
-    background: white;
     color: #5D4037;
+    padding: 4px 2px;
     resize: vertical;
 }
 
-.contact-form-box input:focus,
-.contact-form-box textarea:focus {
+.form-field input:focus,
+.form-field textarea:focus {
     outline: none;
-    border-color: #F48FB1;
+}
+
+.form-footer {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 20px;
+    flex-wrap: wrap;
 }
 
 .form-submit-btn {
@@ -455,11 +479,10 @@ footer {
     -moz-appearance: none;
     appearance: none;
     box-sizing: border-box;
-    margin-top: 10px;
-    background: #F48FB1;
-    color: white;
-    border: 3px solid #EC407A;
-    padding: 12px 20px;
+    background: transparent;
+    color: #880E4F;
+    border: 2px solid #F48FB1;
+    padding: 10px 30px;
     border-radius: 50px;
     font-weight: 700;
     font-family: inherit;
@@ -469,8 +492,9 @@ footer {
 }
 
 .form-submit-btn:hover {
+    background: #F48FB1;
+    color: white;
     transform: translateY(-2px);
-    box-shadow: 4px 4px 0 rgba(236, 64, 122, 0.4);
 }
 
 .form-submit-btn:disabled {
@@ -480,9 +504,8 @@ footer {
 }
 
 .form-status {
-    text-align: center;
     font-weight: 600;
-    margin-top: 5px;
+    margin: 0;
     min-height: 1.2em;
 }
 
