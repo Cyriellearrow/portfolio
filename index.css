@@ -368,6 +368,10 @@ footer {
 }
 
 .contact-form-toggle {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    box-sizing: border-box;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -425,6 +429,11 @@ footer {
 
 .contact-form-box input,
 .contact-form-box textarea {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    box-sizing: border-box;
+    width: 100%;
     font-family: inherit;
     font-size: 1em;
     padding: 12px 15px;
@@ -442,6 +451,10 @@ footer {
 }
 
 .form-submit-btn {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    box-sizing: border-box;
     margin-top: 10px;
     background: #F48FB1;
     color: white;
