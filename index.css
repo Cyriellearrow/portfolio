@@ -361,158 +361,40 @@ footer {
 .peach { left: 70%; animation-duration: 13s; animation-delay: 1s; }
 .star { left: 90%; animation-duration: 11s; animation-delay: 3s; }
 
-/* Formulaire "Me joindre" */
-.contact-form-wrapper {
-    max-width: 500px;
-    margin: 0 auto;
-}
-
-.contact-form-toggle {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    box-sizing: border-box;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    width: 100%;
-    background: #FFB6C1;
-    color: #880E4F;
-    padding: 15px 35px;
-    border-radius: 50px;
-    font-weight: 600;
-    font-size: 1em;
-    font-family: inherit;
-    border: 3px solid #F48FB1;
-    box-shadow: 5px 5px 0 rgba(244, 143, 177, 0.4);
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.contact-form-toggle:hover,
-.contact-form-toggle.is-active {
-    transform: translateY(-3px);
-    box-shadow: 7px 7px 0 rgba(244, 143, 177, 0.4);
-}
-
-.contact-form-box {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.5s ease, margin-top 0.5s ease;
-    margin-top: 0;
-}
-
-.contact-form-box.is-open {
-    max-height: 700px;
-    margin-top: 20px;
-}
-
-.contact-form-box form {
-    display: flex;
-    flex-direction: column;
+/* Compétences détaillées */
+.skill-groups {
+    margin-top: 35px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: 20px;
-    background: rgba(255, 255, 255, 0.85);
-    border: 3px solid #F48FB1;
+}
+
+.skill-group {
+    background: rgba(255, 255, 255, 0.6);
+    padding: 20px;
     border-radius: 20px;
-    padding: 30px;
-    box-shadow: 5px 5px 0 rgba(244, 143, 177, 0.3);
-    text-align: left;
+    border: 3px solid #A1887F;
+    box-shadow: 4px 4px 0 rgba(141, 110, 99, 0.3);
 }
 
-.form-title {
-    color: #880E4F;
-    font-size: 1.4em;
-    font-weight: 700;
-    margin-bottom: 5px;
+.skill-group h3 {
+    color: #6D4C41;
+    font-size: 1.1em;
+    margin-bottom: 12px;
 }
 
-.form-field {
+.chip-row {
     display: flex;
-    flex-direction: column;
-    gap: 8px;
-    padding-bottom: 10px;
-    border-bottom: 2px solid #F8BBD0;
-}
-
-.form-field label {
-    font-weight: 600;
-    color: #880E4F;
-    font-size: 0.95em;
-}
-
-.form-field .required {
-    color: #EC407A;
-}
-
-.form-field input,
-.form-field textarea {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    box-sizing: border-box;
-    width: 100%;
-    border: none;
-    background: transparent;
-    font-family: inherit;
-    font-size: 1em;
-    color: #5D4037;
-    padding: 4px 2px;
-    resize: vertical;
-}
-
-.form-field input:focus,
-.form-field textarea:focus {
-    outline: none;
-}
-
-.form-footer {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    gap: 20px;
     flex-wrap: wrap;
+    gap: 8px;
 }
 
-.form-submit-btn {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    box-sizing: border-box;
-    background: transparent;
-    color: #880E4F;
-    border: 2px solid #F48FB1;
-    padding: 10px 30px;
-    border-radius: 50px;
-    font-weight: 700;
-    font-family: inherit;
-    font-size: 1em;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.form-submit-btn:hover {
-    background: #F48FB1;
+.skill-chip {
+    background: #FFB74D;
     color: white;
-    transform: translateY(-2px);
-}
-
-.form-submit-btn:disabled {
-    opacity: 0.7;
-    cursor: not-allowed;
-    transform: none;
-}
-
-.form-status {
+    padding: 5px 14px;
+    border-radius: 15px;
+    font-size: 0.9em;
     font-weight: 600;
-    margin: 0;
-    min-height: 1.2em;
-}
-
-.form-status.success {
-    color: #2E7D32;
-}
-
-.form-status.error {
-    color: #C62828;
+    border: 2px solid #FF9800;
 }

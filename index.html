@@ -25,7 +25,7 @@
             <img src="image/photo.jpeg" alt="Photo de Cyrielle Arrault" class="profile-photo">
             <div class="profile-text">
                 <h1>✨Cyrielle Arrault✨</h1>
-                <p class="subtitle">PhD en reconversion | Développeuse d'application en devenir</p>
+                <p class="subtitle">Thésarde en reconversion | Développeuse d'application en devenir</p>
             </div>
         </div>
         <div class="intro">
@@ -55,6 +55,14 @@
                     <span class="tag-project">Python</span>
                     <span class="tag-project">PyQt6</span>
                     <span class="tag-project">pandas</span>
+                    <span class="view-more">→ Voir le projet en détail</span>
+                </a>
+                <a href="witchs-hunt-project.html" class="project-card">
+                    <h3>The Witch's Hunt (jeu vidéo)</h3>
+                    <p>Jeu vidéo développé en équipe : programmation du boot, du menu et de l'intégration sonore, UI art et pixel art.</p>
+                    <span class="tag-project">Godot</span>
+                    <span class="tag-project">C#</span>
+                    <span class="tag-project">GitHub</span>
                     <span class="view-more">→ Voir le projet en détail</span>
                 </a>
             </div>
@@ -110,6 +118,13 @@
                     <p>Rigueur, méthodologie, résolution de problèmes complexes, management</p>
                 </div>
             </div>
+
+            <div class="skill-groups">
+                <div class="skill-group"><h3>Langages</h3><div class="chip-row"><span class="skill-chip">C#</span><span class="skill-chip">Python</span><span class="skill-chip">Java</span><span class="skill-chip">PHP</span><span class="skill-chip">HTML</span><span class="skill-chip">CSS</span><span class="skill-chip">JavaScript</span><span class="skill-chip">SQL</span></div></div>
+                <div class="skill-group"><h3>Outils &amp; environnements</h3><div class="chip-row"><span class="skill-chip">Git &amp; GitHub</span><span class="skill-chip">Godot</span><span class="skill-chip">Visual Studio</span><span class="skill-chip">NetBeans</span><span class="skill-chip">Eclipse</span><span class="skill-chip">PyCharm</span><span class="skill-chip">WampServer</span><span class="skill-chip">VirtualBox</span><span class="skill-chip">WordPress</span></div></div>
+                <div class="skill-group"><h3>Bases de données</h3><div class="chip-row"><span class="skill-chip">MySQL</span><span class="skill-chip">PostgreSQL</span><span class="skill-chip">MongoDB</span></div></div>
+                <div class="skill-group"><h3>Méthodes de conception</h3><div class="chip-row"><span class="skill-chip">Merise</span><span class="skill-chip">UML</span></div></div>
+            </div>
         </section>
 
         <section id="parcours">
@@ -117,7 +132,8 @@
             <p style="line-height: 1.8; font-size: 1.1em;">
                 🎓 <strong>Actuellement :</strong> En 1 ère année du BTS Services informatiques aux organisations avec l'option Solutions Logicielles et Applications Métiers.<br><br>
                 💻 <strong>Formation Python :</strong> 120 heures de MOOC sur FUN - Maîtrise des fondamentaux et des bonnes pratiques<br><br>
-                🌱 <strong>Apprentissage actif :</strong> Python, HTML, CSS, et découverte de nouveaux outils chaque jour<br><br>
+                🎮 <strong>Projet de jeu vidéo :</strong> The Witch's Hunt, réalisé avec Godot (C#) et versionné avec GitHub<br><br>
+                🌱 <strong>Apprentissage actif :</strong> Python, C#, HTML, CSS, et découverte de nouveaux outils chaque jour<br><br>
                 🔍 <strong>Ce que je recherche :</strong> Un stage dans le devellopement d'application ou de web<br><br>
                 ✨ <strong>Mes atouts :</strong> Rigueur scientifique, capacité d'analyse, persévérance et passion pour le code
             </p>
@@ -147,42 +163,6 @@
                 </a>
             </div>
             <p>N'hésitez pas à me contacter pour discuter d'opportunités de stage! ☕</p>
-
-            <!-- Formulaire "Me joindre" -->
-            <div class="contact-form-wrapper">
-                <button type="button" class="contact-form-toggle" id="contact-form-toggle" onclick="toggleContactForm()">
-                    <span>💌</span> Me joindre
-                </button>
-                <div class="contact-form-box" id="contact-form-box">
-                    <form id="contact-form" action="https://formsubmit.co/ajax/cyrielle.arrault@outlook.com" method="POST">
-                        <input type="hidden" name="_subject" value="Nouveau message depuis le portfolio 🌸">
-                        <input type="hidden" name="_template" value="table">
-                        <input type="hidden" name="_captcha" value="false">
-
-                        <h3 class="form-title">Contactez-moi 🌸</h3>
-
-                        <div class="form-field">
-                            <label for="cf-name">Votre nom <span class="required">*</span></label>
-                            <input type="text" id="cf-name" name="name" required>
-                        </div>
-
-                        <div class="form-field">
-                            <label for="cf-email">Votre email <span class="required">*</span></label>
-                            <input type="email" id="cf-email" name="email" required>
-                        </div>
-
-                        <div class="form-field">
-                            <label for="cf-message">Votre message <span class="required">*</span></label>
-                            <textarea id="cf-message" name="message" rows="4" required></textarea>
-                        </div>
-
-                        <div class="form-footer">
-                            <p id="form-status" class="form-status" aria-live="polite"></p>
-                            <button type="submit" class="form-submit-btn">Envoyer</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
         </section>
     </div>
 
@@ -191,51 +171,5 @@
         <p>🌸 Fait avec passion et un peu de magie 🌸</p>
         <p>© 2025 Cyrielle - Tous droits réservés</p>
     </footer>
-
-    <script>
-        function toggleContactForm() {
-            const box = document.getElementById('contact-form-box');
-            const btn = document.getElementById('contact-form-toggle');
-            const isOpen = box.classList.toggle('is-open');
-            btn.classList.toggle('is-active', isOpen);
-        }
-
-        document.addEventListener('DOMContentLoaded', function () {
-            const form = document.getElementById('contact-form');
-            const status = document.getElementById('form-status');
-
-            form.addEventListener('submit', function (e) {
-                e.preventDefault();
-                const submitBtn = form.querySelector('.form-submit-btn');
-                submitBtn.disabled = true;
-                submitBtn.textContent = 'Envoi en cours...';
-                status.textContent = '';
-                status.className = 'form-status';
-
-                fetch(form.action, {
-                    method: 'POST',
-                    headers: { 'Accept': 'application/json' },
-                    body: new FormData(form)
-                })
-                    .then(function (response) {
-                        if (!response.ok) throw new Error('Erreur réseau');
-                        return response.json();
-                    })
-                    .then(function () {
-                        status.textContent = '✅ Message envoyé, merci ! Je vous répondrai vite.';
-                        status.className = 'form-status success';
-                        form.reset();
-                    })
-                    .catch(function () {
-                        status.textContent = '❌ Oups, le message n\'a pas pu être envoyé. Réessayez ou écrivez-moi directement par email.';
-                        status.className = 'form-status error';
-                    })
-                    .finally(function () {
-                        submitBtn.disabled = false;
-                        submitBtn.textContent = 'Envoyer 📨';
-                    });
-            });
-        });
-    </script>
 </body>
 </html>

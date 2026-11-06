@@ -444,3 +444,36 @@ section.reveal.is-visible {
         width: 100%;
     }
 }
+
+
+/* Page jeu vidéo */
+.role-list {
+    list-style: none;
+    margin-left: 0;
+}
+
+.role-list li {
+    background: linear-gradient(135deg, #FFF9C4 0%, #FFECB3 100%);
+    border: 3px solid #FDD835;
+    border-radius: 15px;
+    padding: 15px 20px;
+}
+
+.role-list li strong {
+    color: #F57C00;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 15px;
+    margin: 20px 0;
+}
+
+.gallery img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    border: 3px solid #ab7d6b;
+    box-shadow: 4px 4px 0 rgba(141, 110, 99, 0.3);
+}
