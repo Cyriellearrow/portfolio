@@ -411,3 +411,73 @@ footer {
     height: 40px;
     object-fit: contain;
 }
+
+/* Compétences fusionnées : une seule grille homogène */
+.skill-groups {
+    margin-top: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    align-items: start;
+}
+
+.skill-group h3 {
+    padding-bottom: 8px;
+    border-bottom: 2px dashed #D7CCC8;
+}
+
+.chip-badge {
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #f6beab 0%, #cb937d 100%);
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 800;
+}
+
+.skill-chip {
+    justify-content: flex-start;
+    min-height: 88px;
+    line-height: 1.2;
+    overflow-wrap: anywhere;
+}
+
+.skill-note {
+    margin: 14px 0 6px;
+    font-size: 0.9em;
+    color: #8D6E63;
+}
+
+.skill-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.skill-links a {
+    font-size: 0.8em;
+    text-decoration: none;
+    color: #5D4037;
+    font-weight: 600;
+    padding: 5px 12px;
+    border: 2px solid #A1887F;
+    border-radius: 20px;
+    background: white;
+    transition: transform 0.2s ease;
+}
+
+.skill-links a:hover {
+    transform: translateY(-2px);
+}
+
+/* Puces : mots longs sans coupure moche */
+.skill-chip {
+    width: 100px;
+    overflow-wrap: normal;
+    word-break: normal;
+    hyphens: auto;
+    font-size: 0.72em;
+}
