@@ -8,8 +8,8 @@
 
 body {
     font-family: 'Nunito', sans-serif;
-    background: linear-gradient(135deg, #ffecd2 0%, #f6beab 100%);
-    color: #5D4037;
+    background: linear-gradient(160deg, #ede4ff 0%, #fbe3f1 55%, #fff1c4 100%);
+    color: #4A3466;
     min-height: 100vh;
     overflow-x: hidden;
 }
@@ -22,6 +22,7 @@ header {
 }
 
 h1 {
+    color: #7E57C2;
     font-size: clamp(1.7rem, 7vw, 3em);
     line-height: 1.15;
     margin-bottom: 10px;
@@ -35,7 +36,7 @@ h1 {
 
 .subtitle {
     font-size: 1.3em;
-    color: #8D6E63;
+    color: #7E6A9B;
     margin-bottom: 20px;
 }
 
@@ -55,8 +56,8 @@ h1 {
     flex-shrink: 0;
     object-fit: cover;
     border-radius: 50%;
-    border: 4px solid #A1887F;
-    box-shadow: 5px 5px 0 rgba(141, 110, 99, 0.3);
+    border: 4px solid #9575CD;
+    box-shadow: 5px 5px 0 rgba(94, 58, 140, 0.3);
 }
 
 .profile-text {
@@ -90,20 +91,20 @@ h1 {
     align-items: center;
     gap: 10px;
     margin-top: 25px;
-    background: #A1887F;
+    background: #9575CD;
     color: white;
     padding: 14px 32px;
     border-radius: 50px;
     text-decoration: none;
     font-weight: 600;
-    border: 3px solid #8D6E63;
-    box-shadow: 4px 4px 0 rgba(141, 110, 99, 0.3);
+    border: 3px solid #7E6A9B;
+    box-shadow: 4px 4px 0 rgba(94, 58, 140, 0.3);
     transition: all 0.3s ease;
 }
 
 .cv-btn:hover {
     transform: translateY(-4px);
-    box-shadow: 6px 6px 0 rgba(141, 110, 99, 0.3);
+    box-shadow: 6px 6px 0 rgba(94, 58, 140, 0.3);
 }
 
 .intro {
@@ -112,8 +113,8 @@ h1 {
     background: rgba(255, 255, 255, 0.8);
     padding: 25px;
     border-radius: 25px;
-    border: 3px solid #A1887F;
-    box-shadow: 5px 5px 0 rgba(141, 110, 99, 0.3);
+    border: 3px solid #9575CD;
+    box-shadow: 5px 5px 0 rgba(94, 58, 140, 0.3);
     line-height: 1.7;
 }
 
@@ -128,20 +129,20 @@ nav {
 
 .nav-btn {
     display: inline-block;
-    background: #f6beab;
+    background: #B39DDB;
     color: white;
     padding: 12px 30px;
     border-radius: 50px;
     text-decoration: none;
     font-weight: 600;
-    border: 3px solid #cb937d;
-    box-shadow: 3px 3px 0 rgba(141, 110, 99, 0.3);
+    border: 3px solid #7E57C2;
+    box-shadow: 3px 3px 0 rgba(94, 58, 140, 0.3);
     transition: all 0.3s ease;
 }
 
 .nav-btn:hover {
     transform: translateY(-5px);
-    box-shadow: 6px 6px 0 rgba(141, 110, 99, 0.3);
+    box-shadow: 6px 6px 0 rgba(94, 58, 140, 0.3);
 }
 
 /* Conteneur */
@@ -152,16 +153,16 @@ nav {
 }
 
 section {
-    background: #ffecd2;
+    background: rgba(255, 255, 255, 0.88);
     margin: 30px 0;
     padding: 40px;
     border-radius: 30px;
-    border: 4px solid #ab7d6b;
-    box-shadow: 8px 8px 0 rgba(141, 110, 99, 0.3);
+    border: 4px solid #8E6BBF;
+    box-shadow: 8px 8px 0 rgba(94, 58, 140, 0.3);
 }
 
 h2 {
-    color: #6D4C41;
+    color: #5E3A8C;
     font-size: 2.2em;
     margin-bottom: 25px;
     display: flex;
@@ -170,7 +171,7 @@ h2 {
 }
 
 h2::before {
-    content: '🌱';
+    content: '🏮';
     font-size: 1.2em;
 }
 
@@ -200,7 +201,7 @@ h2::before {
 }
 
 .project-card h3 {
-    color: #F57C00;
+    color: #7E57C2;
     font-size: 1.5em;
     margin-bottom: 15px;
 }
@@ -224,7 +225,7 @@ h2::before {
 .view-more {
     display: inline-block;
     margin-top: 15px;
-    color: #F57C00;
+    color: #7E57C2;
     font-weight: 600;
     text-decoration: none;
 }
@@ -242,12 +243,12 @@ h2::before {
 }
 
 .skill-box {
-    background: linear-gradient(135deg, color-mix(in srgb, var(--accent, #4FC3F7) 10%, white) 0%, color-mix(in srgb, var(--accent, #4FC3F7) 25%, white) 100%);
+    background: linear-gradient(135deg, color-mix(in srgb, var(--accent, #9575CD) 10%, white) 0%, color-mix(in srgb, var(--accent, #9575CD) 25%, white) 100%);
     padding: 20px;
     border-radius: 20px;
-    border: 3px solid var(--accent, #4FC3F7);
+    border: 3px solid var(--accent, #9575CD);
     text-align: center;
-    box-shadow: 4px 4px 0 color-mix(in srgb, var(--accent, #4FC3F7) 35%, transparent);
+    box-shadow: 4px 4px 0 color-mix(in srgb, var(--accent, #9575CD) 35%, transparent);
 }
 
 .skill-box a {
@@ -256,15 +257,15 @@ h2::before {
     margin-right: 5px;
     font-size: 9px;
     text-decoration: none;
-    color: #4c555c;
+    color: #4A3466;
     font-weight: 600;
     padding: 5px;
-    border: 1px solid #4c555c;
+    border: 1px solid #4A3466;
     border-radius: 10px;
 }
 
 .skill-box h3 {
-    color: color-mix(in srgb, var(--accent, #01579B) 70%, black);
+    color: color-mix(in srgb, var(--accent, #4527A0) 70%, black);
     font-size: 1.3em;
     margin-bottom: 10px;
 }
@@ -272,7 +273,7 @@ h2::before {
 .skill-icon {
     font-size: 2.5em;
     margin-bottom: 10px;
-    color: var(--accent, #01579B);
+    color: var(--accent, #4527A0);
 }
 
 .skill-icon svg {
@@ -321,7 +322,7 @@ h2::before {
 footer {
     text-align: center;
     padding: 40px 20px;
-    color: #8D6E63;
+    color: #7E6A9B;
     font-size: 0.95em;
 }
 
@@ -343,16 +344,21 @@ footer {
     100% { transform: translateX(100vw); }
 }
 
+/* Lanternes qui s'envolent */
 .fall {
     position: fixed;
+    bottom: -60px;
     font-size: 2em;
-    opacity: 0.2;
+    opacity: 0.35;
+    z-index: -1;
     animation: fall 10s infinite linear;
 }
 
 @keyframes fall {
-    0% { transform: translateY(-100px) rotate(0deg); }
-    100% { transform: translateY(100vh) rotate(360deg); }
+    0%   { transform: translateY(0) rotate(-8deg); opacity: 0; }
+    10%  { opacity: 0.4; }
+    90%  { opacity: 0.4; }
+    100% { transform: translateY(-115vh) rotate(8deg); opacity: 0; }
 }
 
 .moon { left: 10%; animation-duration: 12s; }
@@ -373,12 +379,12 @@ footer {
     background: rgba(255, 255, 255, 0.6);
     padding: 20px;
     border-radius: 20px;
-    border: 3px solid #A1887F;
-    box-shadow: 4px 4px 0 rgba(141, 110, 99, 0.3);
+    border: 3px solid #9575CD;
+    box-shadow: 4px 4px 0 rgba(94, 58, 140, 0.3);
 }
 
 .skill-group h3 {
-    color: #6D4C41;
+    color: #5E3A8C;
     font-size: 1.1em;
     margin-bottom: 12px;
 }
@@ -397,13 +403,13 @@ footer {
     width: 88px;
     padding: 10px 6px;
     background: white;
-    color: #5D4037;
+    color: #4A3466;
     border-radius: 14px;
     font-size: 0.75em;
     font-weight: 700;
     text-align: center;
-    border: 2px solid #D7CCC8;
-    box-shadow: 3px 3px 0 rgba(141, 110, 99, 0.2);
+    border: 2px solid #D1C4E9;
+    box-shadow: 3px 3px 0 rgba(94, 58, 140, 0.2);
 }
 
 .skill-chip img {
@@ -421,7 +427,7 @@ footer {
 
 .skill-group h3 {
     padding-bottom: 8px;
-    border-bottom: 2px dashed #D7CCC8;
+    border-bottom: 2px dashed #D1C4E9;
 }
 
 .chip-badge {
@@ -432,7 +438,7 @@ footer {
     align-items: center;
     justify-content: center;
     border-radius: 50%;
-    background: linear-gradient(135deg, #f6beab 0%, #cb937d 100%);
+    background: linear-gradient(135deg, #B39DDB 0%, #7E57C2 100%);
     color: white;
     font-size: 1.2rem;
     font-weight: 800;
@@ -448,7 +454,7 @@ footer {
 .skill-note {
     margin: 14px 0 6px;
     font-size: 0.9em;
-    color: #8D6E63;
+    color: #7E6A9B;
 }
 
 .skill-links {
@@ -460,10 +466,10 @@ footer {
 .skill-links a {
     font-size: 0.8em;
     text-decoration: none;
-    color: #5D4037;
+    color: #4A3466;
     font-weight: 600;
     padding: 5px 12px;
-    border: 2px solid #A1887F;
+    border: 2px solid #9575CD;
     border-radius: 20px;
     background: white;
     transition: transform 0.2s ease;
@@ -481,3 +487,83 @@ footer {
     hyphens: auto;
     font-size: 0.72em;
 }
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+img, svg { max-width: 100%; }
+
+/* Les grilles ne dépassent jamais l'écran, même sur très petit téléphone */
+.projects-grid { grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr)); }
+.skill-groups  { grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr)); }
+
+/* Tablettes */
+@media (max-width: 900px) {
+    header { padding: 45px 20px 30px; }
+    .contener { padding: 15px; }
+    section { padding: 30px 25px; border-radius: 25px; }
+    h2 { font-size: 1.9em; }
+}
+
+/* Petits écrans / téléphones */
+@media (max-width: 600px) {
+    header { padding: 35px 15px 25px; }
+    .subtitle { font-size: 1.05em; }
+    .intro { padding: 18px; border-radius: 20px; font-size: 0.95em; }
+    .cv-btn { padding: 12px 24px; margin-top: 20px; }
+
+    /* Navigation : 2 boutons par ligne */
+    nav { gap: 10px; padding: 20px 15px; }
+    .nav-btn {
+        flex: 1 1 calc(50% - 10px);
+        text-align: center;
+        padding: 10px 12px;
+        font-size: 0.9em;
+    }
+
+    .contener { padding: 10px; }
+    section { margin: 20px 0; padding: 22px 16px; border-radius: 20px; border-width: 3px; box-shadow: 5px 5px 0 rgba(94, 58, 140, 0.3); }
+    h2 { font-size: 1.5em; gap: 10px; margin-bottom: 18px; }
+
+    .project-card { padding: 20px; }
+    .project-card h3 { font-size: 1.25em; }
+    .project-card:hover { transform: none; }
+
+    /* Compétences : cartes pleine largeur, puces en grille */
+    .skill-group { padding: 16px; }
+    .chip-row {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(86px, 1fr));
+        gap: 8px;
+    }
+    .skill-chip { width: auto; }
+
+    #parcours p { font-size: 1em !important; line-height: 1.7 !important; }
+
+    /* Contact : boutons pleine largeur */
+    .contact-links { flex-direction: column; align-items: stretch; gap: 12px; }
+    .contact-btn { justify-content: center; padding: 13px 20px; }
+
+    /* Moins d'animations de fond sur mobile */
+    .fall { display: none; }
+}
+
+/* Très petits téléphones */
+@media (max-width: 380px) {
+    h2 { font-size: 1.3em; }
+    .nav-btn { flex: 1 1 100%; }
+    .chip-row { grid-template-columns: repeat(auto-fill, minmax(78px, 1fr)); }
+    .skill-chip { font-size: 0.68em; }
+}
+
+/* Respecte la préférence « réduire les animations » */
+@media (prefers-reduced-motion: reduce) {
+    h1, .cloud, .fall { animation: none; }
+    .nav-btn:hover, .cv-btn:hover, .contact-btn:hover, .project-card:hover { transform: none; }
+}
+
+/* Accents or (cheveux de Raiponce) */
+section { border-color: #8E6BBF; }
+.nav-btn { background: #9575CD; }
+.nav-btn:hover { background: #7E57C2; }
+.cv-btn { border-color: #7E57C2; }
+.skill-group h3 { border-bottom-color: #FFD54F; }

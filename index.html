@@ -13,11 +13,11 @@
     <div class="cloud cloud3"></div>
 
     <!-- Éléments qui tombent -->
-    <div class="fall moon">🌑</div>
-    <div class="fall cat">😺</div>
-    <div class="fall flower">🌸</div>
-    <div class="fall peach">🍑</div>
-    <div class="fall star">✨</div>
+    <div class="fall moon">🏮</div>
+    <div class="fall cat">🌻</div>
+    <div class="fall flower">🏮</div>
+    <div class="fall peach">👑</div>
+    <div class="fall star">🌟</div>
 
     <!-- Header / informations -->
     <header>
@@ -96,6 +96,7 @@
                         <span class="skill-chip"><img src="image/skills/pycharm.svg" alt="" width="40" height="40" loading="lazy">PyCharm</span>
                         <span class="skill-chip"><img src="image/skills/wampserver.svg" alt="" width="40" height="40" loading="lazy">WampServer</span>
                         <span class="skill-chip"><img src="image/skills/virtualbox.svg" alt="" width="40" height="40" loading="lazy">VirtualBox</span>
+                        <span class="skill-chip"><img src="image/skills/wordpress.svg" alt="" width="40" height="40" loading="lazy">WordPress</span>
                     </div>
                 </div>
                 <div class="skill-group">
@@ -182,13 +183,16 @@
 
     <!-- Footer -->
     <footer>
-        <p>🌸 Fait avec passion et un peu de magie 🌸</p>
+        <p>🌻 Fait avec passion et un peu de magie 🌻</p>
         <p>© 2025 Cyrielle - Tous droits réservés</p>
     </footer>
 
     <script>
-    // Remplace les icônes introuvables par une pastille avec l'initiale
+    // Essaie d'autres extensions si l'icône est introuvable, sinon affiche une pastille avec l'initiale
     document.querySelectorAll('.skill-chip img').forEach(function (img) {
+        var exts = ['svg', 'png', 'webp', 'jpg', 'jpeg'];
+        var base = img.getAttribute('src').replace(/\.[a-z0-9]+$/i, '');
+        var tried = [img.getAttribute('src')];
         function fallback() {
             var b = document.createElement('span');
             b.className = 'chip-badge';
@@ -196,8 +200,15 @@
             b.textContent = (img.parentNode.textContent.trim().charAt(0) || '?').toUpperCase();
             img.replaceWith(b);
         }
-        if (img.complete && img.naturalWidth === 0) fallback();
-        else img.addEventListener('error', fallback, { once: true });
+        function next() {
+            var candidate = exts.map(function (x) { return base + '.' + x; })
+                                .filter(function (u) { return tried.indexOf(u) === -1; })[0];
+            if (!candidate) return fallback();
+            tried.push(candidate);
+            img.src = candidate;
+        }
+        img.addEventListener('error', next);
+        if (img.complete && img.naturalWidth === 0) next();
     });
     </script>
 </body>

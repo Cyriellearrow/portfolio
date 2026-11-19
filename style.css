@@ -9,8 +9,8 @@
 
 body {
     font-family: 'Nunito', sans-serif;
-    background: linear-gradient(135deg, #ffecd2 0%, #f6beab 100%);
-    color: #5D4037;
+    background: linear-gradient(160deg, #ede4ff 0%, #fbe3f1 55%, #fff1c4 100%);
+    color: #4A3466;
     min-height: 100vh;
     overflow-x: hidden;
 }
@@ -26,14 +26,14 @@ header {
     position: absolute;
     left: 20px;
     top: 40px;
-    background: #f6beab;
+    background: #B39DDB;
     color: white;
     padding: 10px 25px;
     border-radius: 50px;
     text-decoration: none;
     font-weight: 600;
-    border: 3px solid #cb937d;
-    box-shadow: 3px 3px 0 rgba(141, 110, 99, 0.3);
+    border: 3px solid #7E57C2;
+    box-shadow: 3px 3px 0 rgba(94, 58, 140, 0.3);
     transition: all 0.3s ease;
     display: inline-flex;
     align-items: center;
@@ -42,18 +42,18 @@ header {
 
 .back-btn:hover {
     transform: translateY(-3px);
-    box-shadow: 5px 5px 0 rgba(141, 110, 99, 0.3);
+    box-shadow: 5px 5px 0 rgba(94, 58, 140, 0.3);
 }
 
 h1 {
     font-size: 2.5em;
     margin-bottom: 15px;
-    color: #F57C00;
+    color: #7E57C2;
 }
 
 .project-subtitle {
     font-size: 1.2em;
-    color: #8D6E63;
+    color: #7E6A9B;
     margin-bottom: 20px;
 }
 
@@ -66,16 +66,16 @@ h1 {
 
 /* Sections */
 section {
-    background: rgba(255, 255, 255, 0.9);
+    background: rgba(255, 255, 255, 0.88);
     margin: 25px 0;
     padding: 35px;
     border-radius: 25px;
-    border: 3px solid #ab7d6b;
-    box-shadow: 6px 6px 0 rgba(141, 110, 99, 0.3);
+    border: 3px solid #8E6BBF;
+    box-shadow: 6px 6px 0 rgba(94, 58, 140, 0.3);
 }
 
 h2 {
-    color: #6D4C41;
+    color: #5E3A8C;
     font-size: 1.8em;
     margin-bottom: 20px;
     display: flex;
@@ -84,7 +84,7 @@ h2 {
 }
 
 h3 {
-    color: #F57C00;
+    color: #7E57C2;
     font-size: 1.3em;
     margin: 20px 0 10px 0;
 }
@@ -156,22 +156,22 @@ li {
 }
 
 .stat-box {
-    background: linear-gradient(135deg, #B3E5FC 0%, #81D4FA 100%);
+    background: linear-gradient(135deg, #EDE7F6 0%, #D1C4E9 100%);
     padding: 20px;
     border-radius: 15px;
-    border: 3px solid #4FC3F7;
+    border: 3px solid #9575CD;
     text-align: center;
 }
 
 .stat-number {
     font-size: 2em;
     font-weight: 700;
-    color: #01579B;
+    color: #4527A0;
     display: block;
 }
 
 .stat-label {
-    color: #0277BD;
+    color: #5E35B1;
     font-weight: 600;
     margin-top: 5px;
 }
@@ -183,7 +183,7 @@ li {
     border-radius: 15px;
     border: 3px solid #FDD835;
     margin: 20px 0;
-    border-left: 8px solid #F57C00;
+    border-left: 8px solid #7E57C2;
 }
 
 /* Code snippet + bouton copier */
@@ -192,14 +192,14 @@ li {
     align-items: center;
     justify-content: space-between;
     gap: 12px;
-    background: #4A3B33;
+    background: #3B2A57;
     color: #FFECB3;
     padding: 14px 18px;
     border-radius: 12px;
     margin: 0 auto 20px;
     max-width: 560px;
-    border: 3px solid #6D4C41;
-    box-shadow: 4px 4px 0 rgba(141, 110, 99, 0.3);
+    border: 3px solid #5E3A8C;
+    box-shadow: 4px 4px 0 rgba(94, 58, 140, 0.3);
 }
 
 .code-snippet code {
@@ -213,7 +213,7 @@ li {
 .copy-btn {
     flex-shrink: 0;
     background: #FFB74D;
-    color: #4A3B33;
+    color: #3B2A57;
     border: 2px solid #FF9800;
     padding: 8px 16px;
     border-radius: 30px;
@@ -264,21 +264,21 @@ li {
 }
 
 .cta-btn.secondary {
-    background: #B3E5FC;
-    color: #01579B;
-    border-color: #4FC3F7;
-    box-shadow: 5px 5px 0 rgba(79, 195, 247, 0.4);
+    background: #E1D5F7;
+    color: #4527A0;
+    border-color: #9575CD;
+    box-shadow: 5px 5px 0 rgba(149, 117, 205, 0.4);
 }
 
 .cta-btn.secondary:hover {
-    box-shadow: 7px 7px 0 rgba(79, 195, 247, 0.4);
+    box-shadow: 7px 7px 0 rgba(149, 117, 205, 0.4);
 }
 
 /* Footer */
 footer {
     text-align: center;
     padding: 30px 20px;
-    color: #8D6E63;
+    color: #7E6A9B;
     font-size: 0.95em;
 }
 
@@ -460,7 +460,7 @@ section.reveal.is-visible {
 }
 
 .role-list li strong {
-    color: #F57C00;
+    color: #7E57C2;
 }
 
 .gallery {
@@ -474,6 +474,11 @@ section.reveal.is-visible {
     width: 100%;
     height: auto;
     border-radius: 15px;
-    border: 3px solid #ab7d6b;
-    box-shadow: 4px 4px 0 rgba(141, 110, 99, 0.3);
+    border: 3px solid #8E6BBF;
+    box-shadow: 4px 4px 0 rgba(94, 58, 140, 0.3);
 }
+
+/* Accents Raiponce (identiques à la page d'accueil) */
+.back-btn { background: #9575CD; border-color: #7E57C2; }
+.highlight-box { border-left-color: #F9A825; }
+h2 { border-bottom: 3px solid #FFD54F; padding-bottom: 8px; }
